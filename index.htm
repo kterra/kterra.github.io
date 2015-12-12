@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kizzy Terra - Personal Page</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>Kizzy Fernanda Terra Ferreira dos Reis</h1>
+			<h4><a href="mailto:youremail@yourdomain.com">kizzyterra@gmail.com</a></h4>
+        <ul id="top-social">
+        	<li><a href="https://www.facebook.com/kizzy.terra" class="facebook">Facebook</a></li>
+            <li><a href="https://br.linkedin.com/in/kizzy-terra-1a105b29" class="linkedin">LinkedIn</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/designer-photo.jpg" />
+            <h2>Engenheira da Computação e Empreendedora</h2>
+            <p>Graduada em Engenharia de Computação pelo Instituto Militar de Engenharia (2014). Possui perfil empreendedor voltado para o desenvolvimento de software com experiência no projeto, análise e desenvolvimento de aplicações móveis nativas para os sistemas Android. Além disso, também possui interesses na implementação de aplicações com mapas, em mineração e tratamento de dados estruturados e não estruturados e na área de visualização de dados. Atualmente é aluna do Mestrado em Modelagem Matemática da Informação na Escola de Matemática Aplicada (EMAp) na FGV-RJ.</p>
+            <ul id="service-icons">
+            	<li class="services-computer">Computer Engineering</li>
+                <li class="services-mobile">Mobile</li>
+
+            </ul>
+        </div>
+    <div class="bottom-divider"></div>
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->
+    <div id="experience">
+    	<h1>Experiências</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>Sistema de Navegação Assistida para Plataforma Móvel</h2>
+            <p>Sistema de navegação a pé para plataforma móvel Android capaz de retornar um conjunto de rotas entre dois pontos fornecidos pelo usuário. Essas rotas devem conter pontos de interesse coerentes com o perfil dos usuários da aplicação, como praias, museus e cinemas, por exemplo. Além disso, a aplicação é capaz de analisar o conjunto de rotas obtidas e ordená-las de acordo com a qualidade dos pontos de interesse contidos em cada uma dessas rotas.</p>
+            </div>
+
+            <div class="col col-mid">
+							<h2>uPopular</h2>
+	            <p>Projeto e desenvolvimento de aplicativo de utilidade pública selecionado pelo concurso INOVApps 2015. O projeto propõe uma solução de visualização e interação para dados disponíveis no Portal Brasileiro de Dados Abertos a cerca da localização de Unidades de Pronto Atendimento (UPAs) e farmácias participantes do programa Farmácia Popular do Brasil em todo território nacional. Será desenvolvido um aplicativo para as plataformas Android e iOS que permita aos usuários visualizar, em mapa ou lista, e encontrar, por meio de rotas sugeridas, as UPAs e farmácias populares mais próximas e acessíveis à sua localização em tempo real, obtida a partir do GPS de seu dispositivo móvel.</p>
+	            </div>
+
+            <div class="col">
+            <h2>Software de Análise Estática de Malware</h2>
+            <p>Como estudante de iniciação científica implementou um software de engenharia reversa para analisar arquivos no formato portable executable(PE). C# </p>
+            </div>
+        </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+</div>
+
+ <!-- The JavaScript -->
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+        </script>
+</body>
+</html>
